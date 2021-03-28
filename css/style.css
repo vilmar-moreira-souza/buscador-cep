@@ -7,60 +7,83 @@
 body {
   background-color: #fdfdfd;
 }
-.container {   
+.container {
   float: right;
   width: 100%;
 }
 .lateral {
-    font-size: 1.2rem;
-    padding-left: 10px;
-    position: fixed;
+  overflow: auto;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  position: fixed;
   float: left;
-  width: 20%;
+  min-width: 20%;
+  max-width: 35%;
   background-color: rgb(240, 249, 240);
-  height: 100%;  
+  height: 100%;
 }
-.menu {   
-   
+.menu {
   margin-left: 20%;
   font-size: 1.6rem;
   text-align: center;
   padding: 2% 10%;
-    height: 40px;
-  background: rgb(255, 255, 255) ;
-text-decoration: underline;
-
-    
+  height: 40px;
+  background: rgb(255, 255, 255);
+  text-decoration: underline;
 }
 
-main {     
+main {
+  min-height: 400px;
+  margin-left: 20%;
+}
+.busca {
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.busca span {
+  display: block;
+}
+.busca button,
+.busca input {
+  padding: 5px;
+}
+.busca button {
+  cursor: pointer;
+  border: none;
+  border-radius: 2px solid;
+  font-size: 1.2rem;
+}
+.busca button:hover {
+  background-color: rgb(240, 249, 240);
+}
 
-  min-height: 400px;    
- margin-left: 20%;
- 
+.noVisible {
+  display: none;
 }
-.busca{
-   
-    padding: 10px;
-    font-size: 1.5rem;
-    text-align: center;
+.alert {
+  color: red;
 }
-.busca span{
-    
+/* */
+/* mobile- monitores abaixo de 560px*/
+@media screen and (max-width: 560px) {
+  .menu {
+    margin-left: 0%;
+  }
+  .busca button {
     display: block;
-}
-.busca button, .busca input {
-    padding: 5px;
-}
-.busca button{
-    cursor: pointer;
-    border: none;
-    border-radius: 2px solid ;
-    font-size: 1.2rem;
-}
-.busca button:hover{
-    background-color: rgb(240, 249, 240);
-}
-.alert{
-    color: red;
+    text-align: center;
+    margin-left: 33%;
+  }
+  main {
+    justify-content: center;
+    text-align: center;
+    margin-left: 3%;
+  }
+  .lateral {
+    display: none;
+  }
+  .noVisible {
+    display: block;
+  }
 }

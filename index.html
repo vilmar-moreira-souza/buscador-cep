@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Buscador cep</title>
-</head>
-<body>
-    <aside class="lateral">historico </aside>
-<div class="container">    
-    <header class="menu">busca cep</header>  
-        
-    <main class="busca">
-        <input type="number" data-js="campoInput" placeholder="SOMENTE NUMEROS">
+  </head>
+  <body>
+    <aside class="lateral">historico</aside>
+    <div class="container">
+      <header class="menu">busca cep</header>
+
+      <main class="busca">
+        <input
+          type="number"
+          min="0"
+          data-js="campoInput"
+          placeholder="SOMENTE NUMEROS"
+        />
         <button data-js="campoButton">pesquisar</button>
         <span></span>
-    </main>
-
-</div>
+        <span class="noVisible" data-js="spanMobile"></span>
+      </main>
+    </div>
 
     <script src="./javascript/app.js"></script>
-</body>
+  </body>
 </html>
