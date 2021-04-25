@@ -6,7 +6,7 @@ const pesquisar = document.querySelector('[data-js="campoButton"]')
 const resultado = document.querySelector('.busca').children[2]
 const historico = document.querySelector('.lateral')
 const historicoMobile = document.querySelector('[data-js="spanMobile"]')
-historicoMobile.innerHTML += `<br><br><h2 class="noVisible" >historico</h2> `
+historicoMobile.innerHTML += `<br><br> `
 
 // busca cep 
 function buscaCep() {
@@ -26,10 +26,10 @@ function buscaCep() {
                 }
                 else if (cep.status != 404 && cep.status != 400) {
                     //console.log(cep.status)              
-                    let acumulador = `<hr>cep:${cep.cep} <br> cidade:${cep.city}- ${cep.state} <br>${cep.address} <br>Bairro: ${cep.district}`
-                    historico.innerHTML += acumulador
+                    let acumulador = `<hr >  cep:${cep.cep} <br> cidade:${cep.city}- ${cep.state} <br>${cep.address} <br>Bairro: ${cep.district}`
+                    historico.innerHTML = acumulador + historico.innerHTML
                     resultado.innerHTML = acumulador
-                    historicoMobile.innerHTML += `<div class="noVisible"> ${acumulador} <div>`
+                    historicoMobile.innerHTML = `<div class="noVisible">  ${acumulador}  ${historicoMobile.innerHTML} <div>`
 
                 }
             })
@@ -53,3 +53,18 @@ const enterCep = (event) => {
 
 entrada.addEventListener("keypress", enterCep)
 pesquisar.addEventListener("click", buscaCep)
+
+
+
+/*
+entrada.addEventListener("keypress",(e)=>{
+   // formatação/ mascara de cep
+   // input não pode ser do tipo number
+   // teria q fazer uma preventdefaut das letras
+if (entrada.value.length == 2) {
+        entrada.value += "-"
+}
+})
+*/
+
+

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background-color: #fdfdfd;
@@ -11,16 +11,24 @@ body {
   float: right;
   width: 100%;
 }
-.lateral {
-  overflow: auto;
-  font-size: 1.2rem;
+.pLateral{
+  background-color: rgb(240, 249, 240);
   padding-left: 10px;
   position: fixed;
   float: left;
   min-width: 20%;
   max-width: 35%;
-  background-color: rgb(240, 249, 240);
   height: 100%;
+  overflow: auto;
+}
+.lateral {
+  overflow: auto;
+  font-size: 1.2rem;   
+  
+}
+.pLateral h2{ 
+  text-align: center;
+  padding: 10px;
 }
 .menu {
   margin-left: 20%;
@@ -42,7 +50,7 @@ main {
   text-align: center;
 }
 .busca span {
-  display: block;
+  display: block; 
 }
 .busca button,
 .busca input {
@@ -53,6 +61,7 @@ main {
   border: none;
   border-radius: 2px solid;
   font-size: 1.2rem;
+  margin: 15px;
 }
 .busca button:hover {
   background-color: rgb(240, 249, 240);
@@ -67,20 +76,22 @@ main {
 /* */
 /* mobile- monitores abaixo de 560px*/
 @media screen and (max-width: 560px) {
+  .pLateral h2{ display: none;}
+  
   .menu {
     margin-left: 0%;
   }
   .busca button {
     display: block;
     text-align: center;
-    margin-left: 33%;
+    margin-left: 35%;
   }
   main {
     justify-content: center;
     text-align: center;
     margin-left: 3%;
   }
-  .lateral {
+  .pLateral {
     display: none;
   }
   .noVisible {
